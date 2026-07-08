@@ -1,0 +1,27 @@
+.search-intro {
+  font-size: 13px;
+  color: var(--color-grey-500);
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.search-suggestions {
+  margin-top: 4px;
+}
+
+.search-suggestions-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-grey-500);
+  margin-bottom: 8px;
+}
+
+.search-suggestions-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}

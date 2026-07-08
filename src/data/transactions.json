@@ -1,0 +1,50 @@
+[
+  {
+    "id": "txn-1",
+    "description": "Woolworths Sandton City",
+    "category": "Groceries",
+    "date": "2026-07-06",
+    "amount": 542.10,
+    "type": "debit"
+  },
+  {
+    "id": "txn-2",
+    "description": "Salary Deposit",
+    "category": "Income",
+    "date": "2026-07-01",
+    "amount": 24500.00,
+    "type": "credit"
+  },
+  {
+    "id": "txn-3",
+    "description": "Uber Trip",
+    "category": "Transport",
+    "date": "2026-06-30",
+    "amount": 87.50,
+    "type": "debit"
+  },
+  {
+    "id": "txn-4",
+    "description": "Netflix Subscription",
+    "category": "Entertainment",
+    "date": "2026-06-28",
+    "amount": 199.00,
+    "type": "debit"
+  },
+  {
+    "id": "txn-5",
+    "description": "Electricity - City Power",
+    "category": "Utilities",
+    "date": "2026-06-25",
+    "amount": 1150.00,
+    "type": "debit"
+  },
+  {
+    "id": "txn-6",
+    "description": "Transfer from T. Dlamini",
+    "category": "Transfer",
+    "date": "2026-06-22",
+    "amount": 500.00,
+    "type": "credit"
+  }
+]

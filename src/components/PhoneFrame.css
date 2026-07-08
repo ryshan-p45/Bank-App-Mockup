@@ -1,0 +1,92 @@
+.phone-backdrop {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 32px 16px;
+  background: linear-gradient(180deg, var(--color-yellow-50) 0%, var(--color-grey-100) 60%);
+}
+
+.phone-brand {
+  text-align: center;
+  color: var(--color-grey-700);
+}
+
+.phone-brand-mark {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--color-grey-900);
+}
+
+.phone-brand p {
+  margin-top: 4px;
+  font-size: 12px;
+  max-width: 320px;
+}
+
+.phone-frame {
+  position: relative;
+  width: 390px;
+  max-width: 100%;
+  height: 844px;
+  max-height: 92svh;
+  background: var(--color-grey-900);
+  border-radius: 44px;
+  padding: 14px;
+  box-shadow: var(--shadow-phone);
+}
+
+.phone-notch {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 22px;
+  background: var(--color-grey-900);
+  border-radius: 0 0 16px 16px;
+  z-index: 2;
+}
+
+.phone-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--color-white);
+  border-radius: 32px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* On real phone-width viewports, drop the bezel and let the app fill the screen. */
+@media (max-width: 430px) {
+  .phone-backdrop {
+    padding: 0;
+    gap: 0;
+  }
+
+  .phone-brand {
+    display: none;
+  }
+
+  .phone-frame {
+    width: 100%;
+    height: 100svh;
+    max-height: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .phone-notch {
+    display: none;
+  }
+
+  .phone-screen {
+    border-radius: 0;
+  }
+}

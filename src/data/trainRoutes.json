@@ -1,0 +1,68 @@
+[
+  {
+    "id": "train-1",
+    "operator": "Gautrain",
+    "from": "Johannesburg",
+    "to": "Pretoria",
+    "departure": "06:30",
+    "arrival": "07:12",
+    "duration": "42m",
+    "price": 68,
+    "seatsAvailable": 40
+  },
+  {
+    "id": "train-2",
+    "operator": "Gautrain",
+    "from": "Johannesburg",
+    "to": "Pretoria",
+    "departure": "07:00",
+    "arrival": "07:42",
+    "duration": "42m",
+    "price": 68,
+    "seatsAvailable": 32
+  },
+  {
+    "id": "train-3",
+    "operator": "Shosholoza Meyl",
+    "from": "Johannesburg",
+    "to": "Durban",
+    "departure": "18:00",
+    "arrival": "09:15",
+    "duration": "15h 15m",
+    "price": 340,
+    "seatsAvailable": 18
+  },
+  {
+    "id": "train-4",
+    "operator": "Shosholoza Meyl",
+    "from": "Johannesburg",
+    "to": "Cape Town",
+    "departure": "12:50",
+    "arrival": "17:00",
+    "duration": "28h 10m",
+    "price": 520,
+    "seatsAvailable": 10
+  },
+  {
+    "id": "train-5",
+    "operator": "Metrorail",
+    "from": "Cape Town",
+    "to": "Simon's Town",
+    "departure": "08:10",
+    "arrival": "09:15",
+    "duration": "1h 5m",
+    "price": 24,
+    "seatsAvailable": 60
+  },
+  {
+    "id": "train-6",
+    "operator": "Gautrain",
+    "from": "Pretoria",
+    "to": "Hatfield",
+    "departure": "07:20",
+    "arrival": "07:32",
+    "duration": "12m",
+    "price": 35,
+    "seatsAvailable": 50
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "id": "bus-1",
+    "operator": "Intercape",
+    "from": "Johannesburg",
+    "to": "Durban",
+    "departure": "06:00",
+    "arrival": "12:30",
+    "duration": "6h 30m",
+    "price": 450,
+    "seatsAvailable": 12
+  },
+  {
+    "id": "bus-2",
+    "operator": "Greyhound",
+    "from": "Johannesburg",
+    "to": "Durban",
+    "departure": "09:15",
+    "arrival": "16:00",
+    "duration": "6h 45m",
+    "price": 495,
+    "seatsAvailable": 4
+  },
+  {
+    "id": "bus-3",
+    "operator": "Translux",
+    "from": "Johannesburg",
+    "to": "Cape Town",
+    "departure": "14:00",
+    "arrival": "07:30",
+    "duration": "17h 30m",
+    "price": 780,
+    "seatsAvailable": 20
+  },
+  {
+    "id": "bus-4",
+    "operator": "Intercape",
+    "from": "Pretoria",
+    "to": "Cape Town",
+    "departure": "13:00",
+    "arrival": "07:00",
+    "duration": "18h 0m",
+    "price": 810,
+    "seatsAvailable": 9
+  },
+  {
+    "id": "bus-5",
+    "operator": "Greyhound",
+    "from": "Durban",
+    "to": "Johannesburg",
+    "departure": "20:00",
+    "arrival": "02:45",
+    "duration": "6h 45m",
+    "price": 470,
+    "seatsAvailable": 15
+  },
+  {
+    "id": "bus-6",
+    "operator": "City to City",
+    "from": "Johannesburg",
+    "to": "Bloemfontein",
+    "departure": "08:30",
+    "arrival": "13:00",
+    "duration": "4h 30m",
+    "price": 320,
+    "seatsAvailable": 22
+  },
+  {
+    "id": "bus-7",
+    "operator": "Translux",
+    "from": "Cape Town",
+    "to": "Gqeberha",
+    "departure": "07:00",
+    "arrival": "17:30",
+    "duration": "10h 30m",
+    "price": 560,
+    "seatsAvailable": 6
+  },
+  {
+    "id": "bus-8",
+    "operator": "Intercape",
+    "from": "Johannesburg",
+    "to": "Gqeberha",
+    "departure": "11:00",
+    "arrival": "23:30",
+    "duration": "12h 30m",
+    "price": 640,
+    "seatsAvailable": 11
+  }
+]

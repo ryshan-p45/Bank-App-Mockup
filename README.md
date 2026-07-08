@@ -27,3 +27,37 @@ All functionality (buttons etc) should be mockup only and doesn't need to functi
 
 **Design**
 - Sleek, similar to banking apps like Standard bank
+
+## Running the App
+
+**Requirements**
+- Node.js 18+ and npm
+
+**Setup**
+```bash
+npm install
+```
+
+**Development**
+```bash
+npm run dev
+```
+Starts the Vite dev server (with hot reload) and prints a local URL, typically http://localhost:5173.
+
+**Production build**
+```bash
+npm run build
+```
+Type-checks the project and outputs a static build to `dist/`.
+
+```bash
+npm run preview
+```
+Serves the production build locally so you can sanity-check it before deploying.
+
+**Linting**
+```bash
+npm run lint
+```
+
+Log in with any non-empty username and password — the login screen is a mockup and does not check credentials against a real account.
