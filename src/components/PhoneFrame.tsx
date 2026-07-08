@@ -9,7 +9,7 @@ export default function PhoneFrame({ children }: { children: ReactNode }) {
   return (
     <div className="phone-backdrop">
       <div className="phone-brand">
-        <span className="phone-brand-mark">Sunbank</span>
+        <span className="phone-brand-mark">Delusive Bank</span>
         <p>A frontend mockup — nothing here connects to a real bank.</p>
       </div>
       <div className="phone-frame">

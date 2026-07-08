@@ -31,7 +31,7 @@ export default function LoginScreen() {
           <div className="login-logo" aria-hidden="true">
             ☀
           </div>
-          <h1>Sunbank</h1>
+          <h1>Delusive Bank</h1>
           <p>Log in to manage your money and buy tickets on the go.</p>
         </div>
 
