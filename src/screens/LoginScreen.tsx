@@ -45,7 +45,7 @@ export default function LoginScreen() {
               autoComplete="username"
               value={username}
               onChange={(event) => setUsername(event.target.value)}
-              placeholder="e.g. thandiwe.mokoena"
+              placeholder="e.g. John.Somebody"
             />
           </div>
           <div className="field">
