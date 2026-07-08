@@ -3,7 +3,7 @@ import { Navigate, useNavigate, useParams, useSearchParams } from 'react-router-
 import ScreenHeader from '../components/ScreenHeader';
 import LoadingState from '../components/LoadingState';
 import EmptyState from '../components/EmptyState';
-import { isTransportType, searchTrips } from '../utils/vas';
+import { filterTripsByDate, isTransportType, searchTripsByRoute } from '../utils/vas';
 import { formatLongDate } from '../utils/format';
 import type { TripOption } from '../types';
 import './TicketResultsScreen.css';
@@ -31,7 +31,8 @@ export default function TicketResultsScreen() {
   }
 
   const backTo = `/vas/${type}/search?${searchParams.toString()}`;
-  const results: TripOption[] = searchTrips(type, from, to);
+  const routesForPair: TripOption[] = searchTripsByRoute(type, from, to);
+  const results: TripOption[] = filterTripsByDate(routesForPair, date);
 
   const handleSelect = (option: TripOption) => {
     navigate(`/vas/${type}/details/${option.id}?${searchParams.toString()}`);
@@ -50,7 +51,7 @@ export default function TicketResultsScreen() {
 
         {isLoading && <LoadingState label="Looking for the best trips…" />}
 
-        {!isLoading && results.length === 0 && (
+        {!isLoading && routesForPair.length === 0 && (
           <EmptyState
             icon="🔍"
             title="No trips found"
@@ -58,6 +59,19 @@ export default function TicketResultsScreen() {
             action={
               <button type="button" className="secondary-button" onClick={() => navigate(backTo)}>
                 Edit search
+              </button>
+            }
+          />
+        )}
+
+        {!isLoading && routesForPair.length > 0 && results.length === 0 && (
+          <EmptyState
+            icon="📅"
+            title="No trips on this date"
+            description={`${from} to ${to} trips don't run on ${date ? formatLongDate(date) : 'the selected date'}. Try a different date.`}
+            action={
+              <button type="button" className="secondary-button" onClick={() => navigate(backTo)}>
+                Change date
               </button>
             }
           />

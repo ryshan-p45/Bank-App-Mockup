@@ -8,7 +8,8 @@
     "arrival": "12:30",
     "duration": "6h 30m",
     "price": 450,
-    "seatsAvailable": 12
+    "seatsAvailable": 12,
+    "daysOfWeek": [0, 1, 2, 3, 4, 5, 6]
   },
   {
     "id": "bus-2",
@@ -19,7 +20,8 @@
     "arrival": "16:00",
     "duration": "6h 45m",
     "price": 495,
-    "seatsAvailable": 4
+    "seatsAvailable": 4,
+    "daysOfWeek": [0, 1, 2, 3, 4, 5, 6]
   },
   {
     "id": "bus-3",
@@ -30,7 +32,8 @@
     "arrival": "07:30",
     "duration": "17h 30m",
     "price": 780,
-    "seatsAvailable": 20
+    "seatsAvailable": 20,
+    "daysOfWeek": [1, 3, 5, 0]
   },
   {
     "id": "bus-4",
@@ -41,7 +44,8 @@
     "arrival": "07:00",
     "duration": "18h 0m",
     "price": 810,
-    "seatsAvailable": 9
+    "seatsAvailable": 9,
+    "daysOfWeek": [0, 1, 2, 3, 4, 5, 6]
   },
   {
     "id": "bus-5",
@@ -52,7 +56,8 @@
     "arrival": "02:45",
     "duration": "6h 45m",
     "price": 470,
-    "seatsAvailable": 15
+    "seatsAvailable": 15,
+    "daysOfWeek": [0, 1, 2, 3, 4, 5, 6]
   },
   {
     "id": "bus-6",
@@ -63,7 +68,8 @@
     "arrival": "13:00",
     "duration": "4h 30m",
     "price": 320,
-    "seatsAvailable": 22
+    "seatsAvailable": 22,
+    "daysOfWeek": [0, 1, 2, 3, 4, 5, 6]
   },
   {
     "id": "bus-7",
@@ -74,7 +80,8 @@
     "arrival": "17:30",
     "duration": "10h 30m",
     "price": 560,
-    "seatsAvailable": 6
+    "seatsAvailable": 6,
+    "daysOfWeek": [1, 3, 5]
   },
   {
     "id": "bus-8",
@@ -85,6 +92,19 @@
     "arrival": "23:30",
     "duration": "12h 30m",
     "price": 640,
-    "seatsAvailable": 11
+    "seatsAvailable": 11,
+    "daysOfWeek": [0, 1, 2, 3, 4, 5, 6]
+  },
+  {
+    "id": "bus-9",
+    "operator": "City to City",
+    "from": "Johannesburg",
+    "to": "Durban",
+    "departure": "22:00",
+    "arrival": "04:30",
+    "duration": "6h 30m",
+    "price": 380,
+    "seatsAvailable": 18,
+    "daysOfWeek": [5, 6, 0]
   }
 ]

@@ -17,8 +17,8 @@ export function getStationsForType(type: TransportType): string[] {
   return Array.from(new Set(stations)).sort();
 }
 
-/** Mock search: matches routes where "from" and "to" both contain the given text. */
-export function searchTrips(type: TransportType, from: string, to: string): TripOption[] {
+/** Matches routes where "from" and "to" both contain the given text, regardless of date. */
+export function searchTripsByRoute(type: TransportType, from: string, to: string): TripOption[] {
   const normalisedFrom = from.trim().toLowerCase();
   const normalisedTo = to.trim().toLowerCase();
 
@@ -29,6 +29,20 @@ export function searchTrips(type: TransportType, from: string, to: string): Trip
         route.to.toLowerCase().includes(normalisedTo),
     )
     .sort((a, b) => a.departure.localeCompare(b.departure));
+}
+
+/** Narrows a list of trips down to the ones that run on the given ISO date. */
+export function filterTripsByDate(trips: TripOption[], isoDate: string): TripOption[] {
+  if (!isoDate) {
+    return trips;
+  }
+  const dayOfWeek = new Date(`${isoDate}T00:00:00`).getDay();
+  return trips.filter((trip) => trip.daysOfWeek.includes(dayOfWeek));
+}
+
+/** Mock search: matches routes by city, then narrows to trips that actually run on the given date. */
+export function searchTrips(type: TransportType, from: string, to: string, isoDate: string): TripOption[] {
+  return filterTripsByDate(searchTripsByRoute(type, from, to), isoDate);
 }
 
 export function findTripById(type: TransportType, id: string): TripOption | undefined {

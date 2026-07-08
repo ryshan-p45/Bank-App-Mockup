@@ -36,6 +36,8 @@ export interface TripOption {
   duration: string;
   price: number;
   seatsAvailable: number;
+  /** Days this trip runs, as JS Date.getDay() values: 0 = Sunday .. 6 = Saturday. */
+  daysOfWeek: number[];
 }
 
 export interface TicketSearchParams {
