@@ -3,6 +3,7 @@ import account from '../data/account.json';
 import transactions from '../data/transactions.json';
 import user from '../data/user.json';
 import { useToast } from '../context/ToastContext';
+import { SHOW_ACCOUNT_DETAILS } from '../config/featureFlags';
 import { formatCurrency, formatShortDate } from '../utils/format';
 import type { Transaction } from '../types';
 import './DashboardScreen.css';
@@ -40,14 +41,16 @@ export default function DashboardScreen() {
           </Link>
         </div>
 
-        <div className="card balance-card">
-          <p className="balance-card-label">{account.accountType}</p>
-          <p className="balance-card-amount">{formatCurrency(account.balance, account.currency)}</p>
-          <p className="balance-card-available">
-            Available: {formatCurrency(account.availableBalance, account.currency)}
-          </p>
-          <p className="balance-card-account">Account **** {user.accountNumber.slice(-4)}</p>
-        </div>
+        {SHOW_ACCOUNT_DETAILS && (
+          <div className="card balance-card">
+            <p className="balance-card-label">{account.accountType}</p>
+            <p className="balance-card-amount">{formatCurrency(account.balance, account.currency)}</p>
+            <p className="balance-card-available">
+              Available: {formatCurrency(account.availableBalance, account.currency)}
+            </p>
+            <p className="balance-card-account">Account **** {user.accountNumber.slice(-4)}</p>
+          </div>
+        )}
 
         <section>
           <h2 className="section-title">Quick actions</h2>

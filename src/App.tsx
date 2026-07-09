@@ -1,9 +1,10 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Outlet, Route, Routes } from 'react-router-dom';
 import PhoneFrame from './components/PhoneFrame/PhoneFrame';
 import TabLayout from './components/TabLayout';
 import RequireAuth from './components/RequireAuth';
 import { AuthProvider } from './context/AuthContext';
 import { ToastProvider } from './context/ToastContext';
+import { REQUIRE_LOGIN } from './config/featureFlags';
 import LoginScreen from './screens/LoginScreen';
 import DashboardScreen from './screens/DashboardScreen';
 import VasHubScreen from './screens/VasHubScreen';
@@ -22,9 +23,12 @@ function App() {
         <PhoneFrame>
           <ToastProvider>
             <Routes>
-              <Route path="/" element={<LoginScreen />} />
+              <Route
+                path="/"
+                element={REQUIRE_LOGIN ? <LoginScreen /> : <Navigate to="/dashboard" replace />}
+              />
 
-              <Route element={<RequireAuth />}>
+              <Route element={REQUIRE_LOGIN ? <RequireAuth /> : <Outlet />}>
                 <Route element={<TabLayout />}>
                   <Route path="/dashboard" element={<DashboardScreen />} />
                   <Route path="/vas" element={<VasHubScreen />} />

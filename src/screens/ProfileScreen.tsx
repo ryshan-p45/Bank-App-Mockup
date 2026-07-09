@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import user from '../data/user.json';
 import { useAuth } from '../context/AuthContext';
 import { useToast } from '../context/ToastContext';
+import { REQUIRE_LOGIN, SHOW_ACCOUNT_DETAILS } from '../config/featureFlags';
 import './ProfileScreen.css';
 
 const SETTINGS_ITEMS = [
@@ -31,7 +32,9 @@ export default function ProfileScreen() {
         <h1 className="profile-name">
           {user.firstName} {user.lastName}
         </h1>
-        <p className="profile-account">Account **** {user.accountNumber.slice(-4)}</p>
+        {SHOW_ACCOUNT_DETAILS && (
+          <p className="profile-account">Account **** {user.accountNumber.slice(-4)}</p>
+        )}
       </div>
 
       <div className="card profile-settings">
@@ -51,9 +54,11 @@ export default function ProfileScreen() {
         ))}
       </div>
 
-      <button type="button" className="secondary-button" onClick={handleLogout}>
-        Log out
-      </button>
+      {REQUIRE_LOGIN && (
+        <button type="button" className="secondary-button" onClick={handleLogout}>
+          Log out
+        </button>
+      )}
     </>
   );
 }
