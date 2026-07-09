@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom';
-import ScreenHeader from '../components/ScreenHeader';
+import ScreenHeader from '../components/ScreenHeader/ScreenHeader';
 import LoadingState from '../components/LoadingState';
 import EmptyState from '../components/EmptyState';
 import { filterTripsByDate, isTransportType, searchTripsByRoute } from '../utils/vas';

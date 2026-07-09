@@ -1,5 +1,5 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
-import PhoneFrame from './components/PhoneFrame';
+import PhoneFrame from './components/PhoneFrame/PhoneFrame';
 import TabLayout from './components/TabLayout';
 import RequireAuth from './components/RequireAuth';
 import { AuthProvider } from './context/AuthContext';

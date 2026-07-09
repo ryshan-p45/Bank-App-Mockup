@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 import { Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom';
-import ScreenHeader from '../components/ScreenHeader';
+import ScreenHeader from '../components/ScreenHeader/ScreenHeader';
 import { getStationsForType, isTransportType } from '../utils/vas';
 import './TicketSearchScreen.css';
 

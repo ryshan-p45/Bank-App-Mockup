@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import BottomNav from './BottomNav';
+import BottomNav from './BottomNav/BottomNav';
 
 /** Shared shell for the four primary tabs: scrollable content above a fixed bottom nav. */
 export default function TabLayout() {

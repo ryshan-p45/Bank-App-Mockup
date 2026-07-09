@@ -1,5 +1,5 @@
 import { Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom';
-import ScreenHeader from '../components/ScreenHeader';
+import ScreenHeader from '../components/ScreenHeader/ScreenHeader';
 import EmptyState from '../components/EmptyState';
 import { findTripById, isTransportType } from '../utils/vas';
 import { formatLongDate } from '../utils/format';
